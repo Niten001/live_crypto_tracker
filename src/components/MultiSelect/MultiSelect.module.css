@@ -1,0 +1,9 @@
+.label {
+  display: block;
+  margin: 8px;
+}
+
+.select {
+  color: var(--dark-color);
+  cursor: pointer;
+}
