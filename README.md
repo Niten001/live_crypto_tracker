@@ -3,7 +3,7 @@
 A skills assessment task to build a crypto tracking application that compares a selection of currency pairs. The design for this application is based off a Figma design that I prototyped and uses the Kracken WebSocket API to receive live updates on the selected currency pairs. The following are links to the Figma design for the application as well as this crypto application hosted on Netlify. 
 
 - [Figma Design](https://www.figma.com/file/5jXHDs9TMCPRMoemmEg8CJ/Live-Crypto-Ticker---Tim-Martin?node-id=0%3A1&t=BCdqB2jqYhLrkt02-1)
-- [Netlify Site Link]()
+- [Netlify Site Link](https://charming-heliotrope-ecc547.netlify.app/)
 
 This repository contains the entire code base used to achieve this goal including all source code, full documentation on the contents of this repository and instructions on how to setup a development environment and run the program.
 
@@ -27,7 +27,7 @@ Then you must create a folder where you wish to store the project and then open 
 
 You can clone the repository to your project folder by running the following command.
 ```
-git clone https://github.com/Niten001/xxx.git
+git clone https://github.com/Niten001/live_crypto_tracker.git
 ```
 You should now have a copy of the master branch of this repository stored locally on your machine for you to edit and run as required.
 
