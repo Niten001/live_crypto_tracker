@@ -1,7 +1,11 @@
 import { configureStore, Action, ThunkAction } from '@reduxjs/toolkit';
 
+import cryptoDataReducer from './cryptoDataSlice';
+
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    cryptoData: cryptoDataReducer,
+  },
 });
 
 export type AppDispatch = typeof store.dispatch;

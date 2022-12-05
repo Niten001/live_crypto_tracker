@@ -11,6 +11,8 @@ import {
 } from 'recharts';
 
 import { AppConfig } from '../../data/config';
+import { addCryptoData, getCryptoData, initCryptoData } from '../../data/store/cryptoDataSlice';
+import { useAppSelector, useAppDispatch } from '../../data/store/hooks';
 
 let socket: WebSocket;
 
@@ -20,6 +22,9 @@ function timeSince(time: string) {
 }
 
 export default function CryptoChart() {
+  const cryptoData = useAppSelector(getCryptoData);
+  const dispatch = useAppDispatch();
+
   const [ pairs, setPairs ] = useState<string[]>([]);
   
   useEffect(() => {
@@ -37,6 +42,7 @@ export default function CryptoChart() {
           }
         }`);
         setPairs(tempPairs);
+        dispatch(initCryptoData());
       };
 
       socket.onmessage = (message) => {
@@ -49,7 +55,7 @@ export default function CryptoChart() {
           dataPoint[data[3]] = data[1].c[0];
 
           if (timeSince((prevDataPoint ?? Date.now().toString()).time) > 0.1) {
-            console.log(dataPoint);
+            dispatch(addCryptoData(dataPoint));
           }
         }
 
@@ -65,7 +71,10 @@ export default function CryptoChart() {
           <LineChart
             width={1600}
             height={800}
-            data={[]}
+            data={cryptoData.filter((point: any) => (Object.keys(point)[1] == pair)).map((point: any) => ({
+              ...point,
+              time: timeSince(point.time),
+            }))}
             margin={{
               top: 16,
               right: 16,
