@@ -12,6 +12,7 @@ import {
 
 import { AppConfig } from '../../data/config';
 import { addCryptoData, getCryptoData, initCryptoData } from '../../data/store/cryptoDataSlice';
+import { startHeartbeat, stopHeartbeat } from '../../data/store/heartbeatSlice';
 import { useAppSelector, useAppDispatch } from '../../data/store/hooks';
 
 let socket: WebSocket;
@@ -55,6 +56,8 @@ export default function CryptoChart() {
           dataPoint[data[3]] = data[1].c[0];
 
           if (timeSince((prevDataPoint ?? Date.now().toString()).time) > 0.1) {
+            dispatch(startHeartbeat());
+            setTimeout(() => dispatch(stopHeartbeat()), 1000);
             dispatch(addCryptoData(dataPoint));
           }
         }

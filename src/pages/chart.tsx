@@ -12,7 +12,7 @@ export default function Chart() {
       <title>{`${AppConfig.title ?? ""}${AppConfig.title ? " - " : ""}Chart`}</title>
     </Head>
     <main className={styles.container}>
-      <Header navRoute="/" />
+      <Header heart navRoute="/" />
       <section className={styles.chartSection}>
         <div className={styles.chartArea}>
           <CryptoChart />
