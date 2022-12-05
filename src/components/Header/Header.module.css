@@ -28,7 +28,7 @@
 }
 
 .header .heart {
-  color: #CE1616;
+  color: #ce1616;
   padding: 8px;
 }
 
@@ -46,18 +46,18 @@
     transform: scale(1);
   }
   23% {
-    transform: scale(.75);
+    transform: scale(0.75);
   }
   46% {
     transform: scale(1);
   }
   69% {
-    transform: scale(.75);
+    transform: scale(0.75);
   }
   77% {
-    transform: scale(.75);
+    transform: scale(0.75);
   }
   100% {
-    transform: scale( 1 );
+    transform: scale(1);
   }
 }

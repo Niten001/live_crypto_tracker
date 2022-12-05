@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export interface HeartbeatState {
   value: boolean;
@@ -9,7 +9,7 @@ const initialState: HeartbeatState = {
 };
 
 export const heartbeatSlice = createSlice({
-  name: 'heartbeat',
+  name: "heartbeat",
   initialState,
   reducers: {
     startHeartbeat: (state) => {
@@ -22,5 +22,6 @@ export const heartbeatSlice = createSlice({
 });
 
 export const { startHeartbeat, stopHeartbeat } = heartbeatSlice.actions;
-export const getHeartbeat = (state: { heartbeat: HeartbeatState }) => state.heartbeat.value;
+export const getHeartbeat = (state: { heartbeat: HeartbeatState }) =>
+  state.heartbeat.value;
 export default heartbeatSlice.reducer;
