@@ -9,6 +9,13 @@
   --danger-color: #D82D30;
   --light-color: #FAFAFA;
   --dark-color: #202020;
+
+  --button-color: var(--primary-color);
+  --button-hover-color: #1A70E132;
+
+  --border-color: #C4C4C4;
+
+  --component-background: white;
 }
 
 html,

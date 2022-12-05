@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  grid-template-rows: max-content auto;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.chartSection {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  padding: 22px;
+  padding-top: 0;
+}
+
+.chartArea {
+  background-color: var(--component-background);
+  border: solid 1px var(--border-color);
+  border-radius: 4px;
+  height: calc(100vh - 66px - 1.5em);
+  max-height: 800px;
+  max-width: 1600px;
+  width: calc(100vw - 44px);
+}

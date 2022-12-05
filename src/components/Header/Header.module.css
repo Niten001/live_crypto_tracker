@@ -1,0 +1,33 @@
+.header {
+  align-content: center;
+  column-gap: 16px;
+  display: grid;
+  grid-auto-columns: max-content auto;
+  grid-auto-flow: column;
+  padding: 16px;
+  width: 100%;
+}
+
+.header > * {
+  align-content: center;
+  display: grid;
+  line-height: normal;
+  margin: unset;
+  padding: 6px;
+  font-weight: 600;
+}
+
+.header .navButton {
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.header .navButton:hover {
+  background-color: rgba(125, 125, 125, 0.25);
+}
+
+.header .icon {
+  height: 1.5em;
+  width: 1.5em;
+}
